@@ -14,7 +14,7 @@ const App = () => {
 
   const [selected, setSelected] = useState(0)
   const [votes, setVotes] = useState([ 0, 0, 0, 0, 0, 0, 0, 0 ])
-
+  
   const handleVotes = () => {
     const copy = [...votes]
     copy[selected] += 1
