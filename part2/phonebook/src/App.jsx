@@ -29,7 +29,7 @@ const App = () => {
     console.log('button clicked', event.target)
     const newPerson = {
       name: newName,
-      phone: newPhone
+      number: newPhone
     }
 
     const exist = persons.some(person => person.name === newPerson.name)
@@ -38,9 +38,16 @@ const App = () => {
       alert(`${newName} is already added to phonebook`)
     }
     else {
-      setPersons(persons.concat(newPerson))
-      setNewName('')
-      setNewPhone('')
+      axios
+      .post('http://localhost:3001/persons', newPerson)
+      .then(response => {
+        console.log(response)
+        setPersons(persons.concat(newPerson))
+        setNewName('')
+        setNewPhone('')
+      })
+
+
     }
   }
 
