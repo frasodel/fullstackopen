@@ -24,6 +24,11 @@
       "name": "Juan Azorin",
       "number": "687899054",
       "id": "-F8In-ZqIfE"
+    },
+    {
+      "name": "Pepe",
+      "number": "24434",
+      "id": "yswaCIgUI9Y"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
